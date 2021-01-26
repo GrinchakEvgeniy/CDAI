@@ -1,3 +1,59 @@
-body {
-    background-color: aquamarine;
+.table_points {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+.point {
+    width: 10%;
+}
+.row_ {
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+.input_num {
+    width: 30px;
+}
+.point_phantom {
+    width: 85%;
+}
+.name_feature {
+    width: 25%;
+}
+.feature {
+    width: 45%;
+}
+p {
+    font-size: 12px;
+    margin-bottom: 0px !important;
+}
+.p_check {
+    display: inline-block;
+}
+.total {
+    width: 20%;
+}
+
+.tools {
+    position: fixed;
+    top: 20px;
+    right: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.tools button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+.comment {
+    margin-bottom: 30px;
+}
+#pdf {
+    width: 960px !important;
 }

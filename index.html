@@ -5,11 +5,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./src/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <script src="./src/js/html2canvas.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>CDAI</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="pdf">
 
         <div class="header">
             <div class="logo"><img src="" alt=""></div>
@@ -17,14 +19,220 @@
         </div>
 
         <div class="content">
+            <div class="table_">
 
+                    <div class="table_points">
+                        <div class="point_phantom"></div>
+                        <div class="point">Sum</div>
+                        <div class="point">Factor</div>
+                        <div class="point">Sub Total</div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>A. Liquid stools</p>
+                            <p class="fw-light">(cumulative total over the last 7 days)</p>
+                        </div>
+
+                        <div class="feature">
+                            <p class="fw-light">Number of liquid or soft stools over the last 7 days</p>
+                            <div>
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>sum x 2</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>B. Abdominal pain</p>
+                            <p class="fw-light">(cumulative total over the last 7 days)</p>
+                        </div>
+                        <div class="feature">
+                            <p class="fw-light">Daily assesment None = 0; Intermediate = 1 or 2; Severe = 3</p>
+                            <div>
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>sum x 5</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>C. General well being</p>
+                            <p class="fw-light">(cumulative total over the last 7 days)</p>
+                        </div>
+                        <div class="feature">
+                            <p class="fw-light">Daily assesment Well = 0; Intermediate = 1, 2 or 3; Terrible = 4</p>
+                            <div>
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                                <input class="input_num" type="text" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>sum x 7</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>D. Extra-intestinal</p>
+                            <p class="fw-light">(Select any or all symptoms you are having)</p>
+                        </div>
+                        <div class="feature">
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">Arthritis/arthralgia</p>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">Iritis/uveitis</p>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">Skin/mouth lesions</p>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">Peri-anal disease</p>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">Other fistula</p>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">Fever >37.8°C (in the last week)</p>
+                            </div>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>score x 20</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>E. Please tick if you are taking lomotil,</p>
+                            <p>loperamide or opiates for diarrhoea</p>
+                        </div>
+                        <div class="feature">
+                            <div class="check">
+                                <input type="checkbox" class="input_check">
+                                <p class="p_check">(eg Lomotil)</p>
+                            </div>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>value x 30</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>F. Abdominal mass</p>
+                        </div>
+                        <div class="feature">
+                            <form action="">
+                                <input type="radio" class="input_radio" name="val">
+                                <p class="p_check">None (0)</p>
+                                <input type="radio" class="input_radio" name="val">
+                                <p class="p_check">Questionable (2)</p>
+                                <input type="radio" class="input_radio" name="val">
+                                <p class="p_check">Definite (5)</p>
+                            </form>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>value x 10</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>G. Enter your current Haematocrit (Hct).</p>
+                            <p>Skip this section if your</p>
+                            <p>current Haematocrit is unknown</p>
+                        </div>
+                        <div class="feature">
+                            <p>For male, (47 - <input class="input_num" type="text" maxlength="2"> Hct)</p>
+                            <p>For female, (42 - <input class="input_num" type="text" maxlength="2"> Hct)</p>
+                        </div>
+                        <div class="point"><p>0</p></div>
+                        <div class="point"><p>value x 6</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature">
+                            <p>H. Weight</p>
+                            <p class="fw-light">(Maximum deduction of -10 for overweight patients)</p>
+                            <p>Note: Skip this section if</p>
+                            <p>Weight changes related to Crohn's are unknown.</p>
+                        </div>
+                        <div class="feature">
+                            <p>Current body weight <input class="input_num" type="text" maxlength="2"> kg</p>
+                            <p>Standard body weight <input class="input_num" type="text" maxlength="2"> kg</p>
+                        </div>
+                        <div class="total"><p>100 x (1 - (current/standard))</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+                    <div class="row_">
+                        <div class="name_feature"></div>
+                        <div class="feature"></div>
+                        <div class="total"><p>TOTAL CDAI SCORE</p></div>
+                        <div class="point"><p>0</p></div>
+                    </div>
+
+            </div>
+        </div>
+        <div class="comment">
+            <p>The Crohn's Disease Activity Index or CDAI is frequently used to assess disease severity. It gives a score ranging from 0 to over 600, based on a diary of symptoms kept by the patient for 7 days, and other measurements such as the patient's weight and haematocrit.</p>
         </div>
 
-        <div class="tools">
-
+        <div class="comment">
+            <p>A CDAI score of less than 150 is considered to be remission, a score greater than 220 is considered to define moderate to severe disease, and a score greater than 300 is considered to be severe disease. Most major research studies on medications in Crohn's disease define response as a fall of the CDAI of greater than 70 points.</p>
         </div>
+
+        <div class="comment">
+            <h6>Reference:</h6>
+            <p>
+Best WR et al: NationalCooperative Crohn's Disease Study: Gastroenterology. 1976 Mar;70(3):439-44.</p>
+        </div>
+
+        <div class="comment">
+            <h6>Disclaimer:</h6>
+            <p>The calculators allow you to enter patient specific information to calculate a simple score. All information is provided for educational purposes only. This information is not intended to replace clinical judgement. All calculations must be rechecked and should not be used alone to guide patient care. The user assumes sole responsibility for any decisions or action taken based on the information contained here.</p>
+        </div>
+
     </div>
-    <script src="./src/js/main.js"></script>
+
+    <div class="tools" id="tools">
+        <button class="reset btn btn-warning">Reset</button>
+        <button class="print btn btn-primary">Print</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="./src/js/main.js"></script>
 </body>
 </html>

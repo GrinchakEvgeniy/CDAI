@@ -4,6 +4,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/ico" href="./favicon.ico"/>
     <link rel="stylesheet" href="./src/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
     <script src="./src/js/html2canvas.js"></script>
@@ -14,8 +15,8 @@
     <div class="container" id="pdf">
 
         <div class="header">
-<!--            <div class="logo"><img src="./src/logo.svg" alt=""></div>-->
-            <div class="logo"><img src="./logo.png" alt=""></div>
+            <div class="logo"><img src="./src/logo.svg" alt=""></div>
+<!--            <div class="logo"><img src="./logo.png" alt=""></div>-->
             <div class="title"><h2>Crohn's Disease Activity Index (CDAI)</h2></div>
         </div>
 
@@ -126,6 +127,10 @@
                                 <input type="checkbox" class="input_check D-in">
                                 <p class="p_check">Fever >37.8°C (in the last week)</p>
                             </div>
+                            <div class="check">
+                                <input type="checkbox" class="input_check zero D-in">
+                                <p class="p_check">None of above</p>
+                            </div>
                         </div>
                         <div class="point"><p class="result1-D">0</p></div>
                         <div class="point"><p>score x 20</p></div>
@@ -174,8 +179,8 @@
                             <p>current Haematocrit is unknown</p>
                         </div>
                         <div class="feature">
-                            <p>For male, (47 - <input class="input_num G-in" id="m" type="text" maxlength="2"> Hct)</p>
-                            <p>For female, (42 - <input class="input_num G-in" id="f" type="text" maxlength="2"> Hct)</p>
+                            <div class="tex_mul"><p class="pw">For male, (47 -</p><input class="input_num G-in" id="m" type="text" maxlength="2"><p>Hct)</p></div>
+                            <div class="tex_mul"><p class="pw">For female, (42 -</p><input class="input_num G-in" id="f" type="text" maxlength="2"><p>Hct)</p></div>
                         </div>
                         <div class="point"><p class="result1-G">0</p></div>
                         <div class="point"><p>value x 6</p></div>
@@ -190,8 +195,8 @@
                             <p>Weight changes related to Crohn's are unknown.</p>
                         </div>
                         <div class="feature">
-                            <p>Current body weight <input class="input_num H-in" id="c" type="text" maxlength="3"> kg</p>
-                            <p>Standard body weight <input class="input_num H-in" id="s" type="text" maxlength="3"> kg</p>
+                            <div class="tex_mul"><p class="pl">Current body weight</p>  <input class="input_num H-in" id="c" type="text" maxlength="3"><p>kg</p></div>
+                            <div class="tex_mul"><p class="pl">Standard body weight</p> <input class="input_num H-in" id="s" type="text" maxlength="3"><p>kg</p></div>
                         </div>
                         <div class="total"><p>100 x (1 - (current/standard))</p></div>
                         <div class="point"><p class="result2-H">0</p></div>

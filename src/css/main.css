@@ -7,6 +7,13 @@
 .point {
     width: 10%;
 }
+.point p {
+    display: inline;
+}
+.row_ .point {
+    display: flex;
+    justify-content: center;
+}
 .row_ {
     display: flex;
     margin-bottom: 10px;
@@ -15,6 +22,7 @@
 }
 .input_num {
     width: 30px;
+    font-size: 16px;
 }
 .point_phantom {
     width: 85%;
@@ -31,6 +39,10 @@ p {
 }
 .p_check {
     display: inline-block;
+}
+@print{
+    @page :footer {color: #fff }
+    @page :header {color: #fff}
 }
 .total {
     width: 20%;
@@ -49,7 +61,7 @@ p {
 }
 
 .content {
-    margin-bottom: 100px;
+    margin-bottom: 85px;
 }
 .comment {
     margin-bottom: 30px;
@@ -61,9 +73,33 @@ p {
     width: 100%;
 }
 .logo {
-    width: 105px;
+    width: 150px;
 }
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+input {
+    text-align: center;
+}
+.pw {
+    width: 100px;
+}
+.tex_mul {
+    display: flex;
+    justify-content: flex-start;
+    width: 250px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.tex_mul input {
+    margin-right: 5px;
+}
+.pl {
+    width: 130px;
 }
